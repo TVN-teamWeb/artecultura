@@ -10,7 +10,7 @@ get_header(); ?>
       <h1 class="title"><?php the_title(); ?></h1>
     </div>
 
-    <div class="testo">
+    <div class="testo-newsletter">
       <?php the_content(); ?>
     </div>
 

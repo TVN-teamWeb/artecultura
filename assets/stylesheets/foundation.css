@@ -9572,4 +9572,118 @@ section.single-blog article p.date {
   padding-top: 2%;
   font-weight: bold; }
 
+/* PHPLIST CSS Document */
+.phplist fieldset legend {
+  font-size: 1.1em;
+  /* bump up legend font size, not too large or it'll overwrite border on left */
+  /* be careful with padding, it'll shift the nice offset on top of border  */ }
+
+.phplist label {
+  display: block;
+  /* block float the labels to left column, set a width */
+  float: left;
+  width: 40px;
+  padding: 0;
+  margin: 5px 0 0;
+  /* set top margin same as form input - textarea etc. elements */
+  text-align: right; }
+
+.phplist {
+  /* set width in form, not fieldset (still takes up more room w/ fieldset width */
+  font: 100% verdana,arial,sans-serif;
+  margin: 0;
+  padding: 0;
+  /*  min-width: 500px;
+  max-width: 700px;
+  width: 660px; */ }
+
+/* Use to style multiple lists */
+.phplist .list {
+  list-style-type: none; }
+
+/* Caption for multiple lists */
+.phplist fieldset {
+  border-color: #000;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  /* padding in fieldset support spotty in IE */
+  margin: 0; }
+
+.phplist input, .phplist textarea, .phplist select {
+  /* display: inline; inline display must not be set or will hide submit buttons in IE 5x mac */
+  width: auto;
+  /* set width of form elements to auto-size, otherwise watch for wrap on resize */
+  margin: 5px 0 0 10px;
+  /* set margin on left of form elements rather than right of
+                              label aligns textarea better in IE */ }
+
+.phplist input#reset {
+  margin-left: 0px;
+  /* set margin-left back to zero on reset button (set above) */ }
+
+.phplist textarea {
+  overflow: auto; }
+
+.phplist small {
+  display: block;
+  margin: 0 0 5px 160px;
+  /* instructions/comments left margin set to align w/ right column inputs */
+  padding: 1px 3px;
+  font-size: 88%; }
+
+.phplist .required {
+  font-weight: bold;
+  color: red; }
+
+.phplist .requiredOutline {
+  border: 1px solid #ff0000; }
+
+/* uses class instead of div, more efficient */
+.phplist br {
+  clear: left;
+  /* setting clear on inputs didn't work consistently, so brs added for degrade */ }
+
+/* End Contact Form CSS */
+.testo-newsletter {
+  text-align: left;
+  padding-top: 5%; }
+  .testo-newsletter .newsletter-form {
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2% 2%; }
+    .testo-newsletter .newsletter-form::before, .testo-newsletter .newsletter-form::after {
+      display: table;
+      content: ' '; }
+    .testo-newsletter .newsletter-form::after {
+      clear: both; }
+    .testo-newsletter .newsletter-form label {
+      font-size: 1.2em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-family: 'Oswald', sans-serif; }
+    .testo-newsletter .newsletter-form input#attribute1, .testo-newsletter .newsletter-form input#email {
+      margin: 0 0 0 8%;
+      width: 32%;
+      border-bottom: 1px solid #000000;
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+      -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0);
+      box-shadow: inset 0 0px 0px rgba(10, 10, 10, 0);
+      font-family: 'Oswald', sans-serif; }
+    .testo-newsletter .newsletter-form label.required {
+      color: #000 !important; }
+    .testo-newsletter .newsletter-form input#contactsubmit {
+      padding: 1% 2%;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 2px;
+      font-size: 1.1em; }
+
 /*# sourceMappingURL=foundation.css.map */
