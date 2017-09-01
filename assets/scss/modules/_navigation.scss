@@ -1,0 +1,333 @@
+// Navigation breakpoints
+.desktop-menu, .top-bar-left {
+  @include show-for(medium);
+}
+
+#mobile-menu, .title-bar {
+  @include hide-for(medium);
+}
+
+// Mobile menu
+.off-canvas {
+  > ul.menu {
+    height: 100vh;
+    padding: 1rem;
+
+    a {
+      color: $white;
+      font-weight: 600;
+      font-size: rem-calc(18);
+      opacity: .75;
+    }
+
+    .is-accordion-submenu-parent > a::after {
+      display: block;
+      width: 0;
+      height: 0;
+      border: inset 6px;
+      content: '';
+      border-bottom-width: 0;
+      border-top-style: solid;
+      border-color: $white transparent transparent;
+      position: absolute;
+      top: 50%;
+      margin-top: -3px;
+      right: 1rem;
+      }
+  }
+
+  .menu .active > a { background-color: lighten($outer-space, 10%); }
+
+
+}
+
+.title-bar-title {
+  a {
+    font-size: 1rem;
+    color: #B9B9B9;
+  }
+}
+
+
+
+// Tablet and desktop menu
+
+
+@include breakpoint(small only) {
+  #widemenu{
+    display: none;
+  }
+}
+@include breakpoint(medium) {
+
+}
+
+
+/*header{
+  opacity:0.8;
+  .menu-centered{
+    max-width: 1024px !important;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}*/
+
+
+
+
+
+.header {
+  //padding: 15px 0;
+  height: 30px;
+  background-color: #000;
+  background-size: cover;
+  color: #fff;
+  z-index: 1000;
+
+  .menu-social{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+      .menu > li > a{
+        padding: .5rem  1rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 0.75em;
+        font-family: 'Oswald', sans-serif;
+      }
+      .menu > li > a.social{
+        padding: .5rem  .4rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 0.75em;
+        font-family: 'Oswald', sans-serif;
+      }
+  }
+
+}
+
+[data-sticky] {
+  width: 100%;
+}
+
+.top-bar {
+  padding: 1rem;
+  transition: padding .25s ease;
+  img.logo-header{
+    width: 85%;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width .8s ease;
+  }
+}
+
+.is-stuck .top-bar {
+  padding: .5rem;
+  transition: padding .25s ease;
+  opacity: 0.9;
+  img.logo-header{
+    width: 70% !important;
+  }
+}
+
+
+.top-bar, .top-bar ul{
+  background-color: #ffffff;
+}
+
+.menu-centered{
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sticky-container {
+  width: 100%;
+  z-index: 1000;
+}
+
+@include breakpoint(medium only) {
+  img.logo{width: 140px;}
+}
+
+.top-bar{
+  background-color: #ffffff !important;
+}
+
+.top-bar ul#menu-menu{
+
+  background-color: inherit !important;
+}
+
+.dropdown.menu.vertical.submenu.is-dropdown-submenu.first-sub{
+  /*background-color: #e0081f;*/
+  /*background-color: #353535;*/
+  background: url(../../assets/images/bckground.png) !important;
+  background-repeat: repeat;
+  @include breakpoint(medium only) {
+    li a{
+      font-size: 0.7em;
+      text-align: center;
+    }
+  }
+    @include breakpoint(large) {
+    li a{
+      font-size: 1em;
+    }
+  }
+}
+
+
+
+img.logo-header{
+    @include breakpoint(medium only) {
+      width: 70% !important;
+    }
+    @include breakpoint(large) {
+      width: 85% !important;
+    }
+}
+
+.top-bar {
+
+  .top-bar-left{
+
+    @include breakpoint(medium only) {
+    margin-left: 1%;
+    width: 25%;
+    }
+
+
+  }
+
+  .top-bar-right{
+    position: relative !important;
+    @include breakpoint(large){
+      top: 20px !important;
+    }
+  }
+
+  /*background-color: #e0081f;*/
+  padding: 2%;
+  .menu .home a {
+    font-size: 0.875rem;
+    color: #B9B9B9;
+  }
+
+  li.current-menu-item a{
+    /*color: #e0081f !important;
+    background-color: #353535;*/
+    color: #aaaaaa;
+    font-weight: bold;
+    //border-bottom: 2px solid red;
+  }
+
+
+
+  .menu a {
+    color: #000000;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    background-color:none;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: bold;
+    font-size: 0.875rem;
+    position: relative;
+    line-height: 1;
+
+
+    &:hover:not(.button) {
+      /*background-color: #ffffff;
+      color: #e0081f;*/
+      /*background-color: #353535;*/
+      color: #000000;
+      //border-bottom: 2px solid red;
+      //transition: .7s;
+    }
+  }
+
+.dropdown.menu > li.opens-left > .is-dropdown-submenu{
+  left: 0 !important;
+}
+
+
+.menu .active > a {
+  //background-color: #ffffff;
+  //background: url(../../assets/images/bckground.png) !important;
+  font-weight: bold !important;
+  color: #000000 !important;
+  //border-bottom: 1px solid #000;
+}
+
+.menu > li > a:before{
+  display: inline !important;
+  content: "";
+position: absolute;
+width: 100%;
+height: 3px;
+bottom: 0;
+left: 0;
+background-color: #e40514;
+visibility: hidden;
+-webkit-transform: scaleX(0);
+transform: scaleX(0);
+-webkit-transition: all 0.3s ease-in-out 0s;
+transition: all 0.3s ease-in-out 0s;
+}
+
+.menu > li > a:hover:before{
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+  @include breakpoint(medium only) {
+    .menu>li:not(.menu-text)>a { padding: 0.6rem; }
+  }
+  @include breakpoint(large) {
+    .menu>li:not(.menu-text)>a { padding: 0.7rem; }
+  }
+  .menu li:not(:last-child) { border:none; }
+
+  .dropdown.menu .submenu { border: 0; }
+  .dropdown.menu .has-submenu.is-down-arrow a { padding-right: 1rem; }
+  .dropdown.menu .has-submenu.is-down-arrow > a::after { border: 0; }
+  .dropdown.menu:first-child > li.is-dropdown-submenu-parent > a::after { display: none; }
+}
+
+
+.is-dropdown-submenu{
+  /*min-width: 140px !important;*/
+}
+
+ul.dropdown.menu.vertical.submenu.is-dropdown-submenu.first-sub li a:hover{
+  color:#e0081f;
+}
+
+// Basic styles for post navigation. Nicolas Gallagher's "Micro clearfix"
+// https://css-tricks.com/snippets/css/clear-fix/
+.post-navigation:before,
+.post-navigation:after {
+  content: "";
+  display: table;
+}
+
+.post-navigation:after {
+  clear:both;
+}
+
+.nav-previous { float:left; }
+.nav-next { float:right; }
